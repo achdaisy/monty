@@ -1,6 +1,14 @@
 #ifndef MY_MAIN_FILE
 #define MY_MAIN_FILE
 
+#include <stdio.h>
+#include <stdlib.h>
+#include <sys/types.h>
+#include <string.h>
+#include <unistd.h>
+#include <fcntl.h>
+#include <ctype.h>
+
 /*Data Structures*/
 /**
  * struct stack_s - doubly linked list representation of a stack (or queue)
@@ -32,5 +40,15 @@ typedef struct instruction_s
         char *opcode;
         void (*f)(stack_t **stack, unsigned int line_number);
 } instruction_t;
+
+/*My own custom struct*/
+typedef struct monty_t
+{
+	char *args;
+	FILE *filename;
+	char *buffer;
+	int integer;
+}type_monty;
+extern type_monty monty;
 
 #endif
