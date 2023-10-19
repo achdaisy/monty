@@ -51,4 +51,8 @@ typedef struct monty_t
 }type_monty;
 extern type_monty monty;
 
+/*Function prototypes*/
+void pall(stack_t **head, unsigned int incrementor);
+void free_st(stack_t *h);
+
 #endif
