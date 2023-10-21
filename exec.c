@@ -1,4 +1,4 @@
-#include "main.h"
+#include "monty.h"
 
 /**
  * execw - executes the opst instructions
@@ -16,7 +16,6 @@ int execw(char *buffer, stack_t **stack, unsigned int incrementor, FILE *filenam
 		{"push", push_t},
 		{"pop", pop_t},
 		{"swap", swap_t},
-		{"add", add_t},
 		{"nop", nop_t},
 		{"pall", pall_t},
 		{NULL, NULL}
@@ -26,7 +25,7 @@ int execw(char *buffer, stack_t **stack, unsigned int incrementor, FILE *filenam
 	cmd = strtok(buffer, " \n\t");
 	if (cmd && cmd[0] == '#')
 		return (0);
-	monty.arg = strtok(NULL, " \n\t");
+	monty.args = strtok(NULL, " \n\t");
 	while (opst[i].opcode && cmd)
 	{
 		if (strcmp(cmd, opst[i].opcode) == 0)

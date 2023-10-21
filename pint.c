@@ -1,4 +1,4 @@
-#include "main.h"
+#include "monty.h"
 
 /**
  * pint_t - prints the value at the top of the stack

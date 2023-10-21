@@ -1,4 +1,4 @@
-#include "main.h"
+#include "monty.h"
 
 /**
  * push_t - adds an element to the (top of) stack
@@ -10,15 +10,16 @@
 
 void push_t(stack_t **head, unsigned int incrementor)
 {
-	int i = 0, n, flag = 0;
+	int i = 0, flag = 0;
+	/*int n*/
 
-	if (monty.arg)
+	if (monty.args)
 	{
-		if (monty.arg[0] == '-')
+		if (monty.args[0] == '-')
 			i++;
-		for (i = 0; monty.arg[i] != '\0'; i++)
+		for (i = 0; monty.args[i] != '\0'; i++)
 		{
-			if (monty.arg[i] > 57 || monty.arg[i] < 48)
+			if (monty.args[i] > 57 || monty.args[i] < 48)
 				flag = 1;
 		}
 		if (flag == 1)
@@ -38,10 +39,10 @@ void push_t(stack_t **head, unsigned int incrementor)
 		free_st(*head);
 		exit(EXIT_FAILURE);
 	}
-	n = atoi(monty.arg);
-	if (monty.integer == 0)
+	/*n = atoi(monty.args);*/
+	/*if (monty.integer == 0)
 		addnode(head, n);
 	else
-		addqueue(head, n);
+		addqueue(head, n);*/
 }
 

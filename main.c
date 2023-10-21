@@ -1,4 +1,5 @@
-#include "main.h"
+#include "monty.h"
+#include <stdio.h>
 
 /**
  * main - entry point
@@ -7,7 +8,7 @@
  *
  * Return: 0
  */
-monty_type monty = {NULL, NULL, NULL, 0};
+type_monty monty = {NULL, NULL, NULL, 0};
 
 int main(int argc, char *argv[])
 {

@@ -1,4 +1,4 @@
-#include "main.h"
+#include "monty.h"
 
 /**
  * pall_t - print the stack
@@ -16,7 +16,7 @@ void pall_t(stack_t **head, unsigned int incrementor)
 	tmp = *head;
 	if (tmp == NULL)
 	{
-		return
+		exit(EXIT_FAILURE);
 	}
 	while (tmp != NULL)
 	{
