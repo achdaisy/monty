@@ -1,14 +1,14 @@
 #include "main.h"
 
 /**
- * pall - print the stack
+ * pall_t - print the stack
  * @head: head of the stack data structure
  * @incrementor: unused bvariable
  *
  * Return: nothing
  */
 
-void pall(stack_t **head, unsigned int incrementor)
+void pall_t(stack_t **head, unsigned int incrementor)
 {
 	stack_t *tmp;
 	(void) incrementor;
