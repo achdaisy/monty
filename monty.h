@@ -64,7 +64,7 @@ extern type_monty monty;
 /*Function prototypes*/
 void pall_t(stack_t **head, unsigned int incrementor);
 void free_st(stack_t *h);
-int execw(char *buffer, stack_t **stack, int incrementor, FILE *filename);
+int execw(char *buffer, stack_t **stack, unsigned int incr, FILE *filename);
 void nop_t(stack_t **head, unsigned int incrementor);
 void pint_t(stack_t **head, unsigned int incrementor);
 void pop_t(stack_t **head, unsigned int incrementor);

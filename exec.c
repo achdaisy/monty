@@ -5,12 +5,12 @@
  * @buffer: info
  * @stack: thelinked list
  * @filename: monty file
- * @incrementor: variable to hold integer values
+ * @incr: variable to hold integer values
  *
  * Return: nothing
  */
 
-int execw(char *buffer, stack_t **stack, int incrementor, FILE *filename)
+int execw(char *buffer, stack_t **stack, unsigned int incr, FILE *filename)
 {
 	instruction_t opst[] = {
 		{"push", push_t},
@@ -31,14 +31,14 @@ int execw(char *buffer, stack_t **stack, int incrementor, FILE *filename)
 	{
 		if (strcmp(cmd, opst[i].opcode) == 0)
 		{
-			opst[i].f(stack, incrementor);
+			opst[i].f(stack, incr);
 			return (0);
 		}
 		i++;
 	}
 	if (cmd && opst[i].opcode == NULL)
 	{
-		fprintf(stderr, "L%d: unknown instruction %s\n", incrementor, cmd);
+		fprintf(stderr, "L%d: unknown instruction %s\n", incr, cmd);
 		fclose(filename);
 		free(buffer);
 		free_st(*stack);
