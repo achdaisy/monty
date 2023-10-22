@@ -12,7 +12,7 @@
 
 int main(int argc, char *argv[])
 {
-	/*type_monty monty = {NULL, NULL, NULL, 0};*/
+	type_monty monty = {NULL, NULL, NULL, 0};
 	char *buffer;
 	FILE *filename;
 	size_t n = 0;
