@@ -17,9 +17,9 @@ void pint_t(stack_t **head, unsigned int incrementor)
 	else
 	{
 		fprintf(stderr, "L%u: can't pint, stack empty\n", incrementor);
-		fclose(monty.filename);
+       		fclose(monty.filename);
 		free(monty.buffer);
 		free_st(*head);
 		exit(EXIT_FAILURE);
 	}
-}
+}	

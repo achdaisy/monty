@@ -40,6 +40,8 @@ void push_t(stack_t **head, unsigned int incrementor)
 		exit(EXIT_FAILURE);
 	}
 	/*n = atoi(monty.args);*/
-	/*if (monty.integer == 0)*/
+	/*if (monty.integer == 0)
+		addnode(head, n);
+	else
+		addqueue(head, n);*/
 }
-

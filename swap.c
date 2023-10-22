@@ -1,9 +1,8 @@
 #include "monty.h"
 
 /**
- * swap_t - swaps the top elements of teh stack
+ * swap - swaps the top elements of teh stack
  * @head: head of the stack
- * @incrementor: line number
  *
  * Return: nothing
  */
@@ -31,4 +30,4 @@ void swap_t(stack_t **head, unsigned int incrementor)
 	number = ptr->n;
 	ptr->n = ptr->next->n;
 	ptr->next->n = number;
-}
+}	
