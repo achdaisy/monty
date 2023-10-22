@@ -42,19 +42,29 @@ typedef struct instruction_s
 } instruction_t;
 
 /*My own custom struct*/
+
+/**
+ * struct monty_t - holds the information required to run the instructions
+ * @args: command arguments
+ * @buffer: contet from getline
+ * @filename: the file
+ * @integer: an integer
+ *
+ * Description: custom struct
+ */
 typedef struct monty_t
 {
 	char *args;
 	FILE *filename;
 	char *buffer;
 	int integer;
-}type_monty;
+} type_monty;
 extern type_monty monty;
 
 /*Function prototypes*/
 void pall_t(stack_t **head, unsigned int incrementor);
 void free_st(stack_t *h);
-int execw(char *buffer, stack_t **stack, unsigned int incrementor, FILE *filename);
+int execw(char *buffer, stack_t **stack, int incrementor, FILE *filename);
 void nop_t(stack_t **head, unsigned int incrementor);
 void pint_t(stack_t **head, unsigned int incrementor);
 void pop_t(stack_t **head, unsigned int incrementor);
