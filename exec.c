@@ -10,7 +10,7 @@
  * Return: nothing
  */
 
-int execw(char *buffer, stack_t **stack, unsigned int incrementor, FILE *filename)	
+int execw(char *buffer, stack_t **stack, int incrementor, FILE *filename)
 {
 	instruction_t opst[] = {
 		{"push", push_t},
@@ -22,6 +22,7 @@ int execw(char *buffer, stack_t **stack, unsigned int incrementor, FILE *filenam
 		};
 	unsigned int i = 0;
 	char *cmd;
+
 	cmd = strtok(buffer, " \n\t");
 	if (cmd && cmd[0] == '#')
 		return (0);

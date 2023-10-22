@@ -1,5 +1,6 @@
 #include "monty.h"
 #include <stdio.h>
+#include <stdlib.h>
 
 /**
  * main - entry point
@@ -8,14 +9,14 @@
  *
  * Return: 0
  */
-type_monty monty = {NULL, NULL, NULL, 0};
 
 int main(int argc, char *argv[])
 {
+	type_monty monty = {NULL, NULL, NULL, 0};
 	char *buffer;
 	FILE *filename;
 	size_t n = 0;
-	ssize_t charsread = 1;
+	ssize_t charsread;
 	stack_t *stack = NULL;
 	unsigned int incrementor = 0;
 
@@ -31,7 +32,7 @@ int main(int argc, char *argv[])
 		fprintf(stderr, "Error can't open file %s\n", argv[1]);
 		exit(EXIT_FAILURE);
 	}
-	while (charsread > 0)
+	while ((getline(&buffer, &n, filename)) > 0)
 	{
 		buffer = NULL;
 		charsread = getline(&buffer, &n, filename);
